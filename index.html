@@ -10,6 +10,7 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid vertAlR">
@@ -49,14 +50,15 @@
       
                       <div class="row">
                         <div class="col-md-6 mb-4">
+                          <form onsubmit="return validateForm();">
                           <div class="form-outline">
-                            <input type="text" id="formName" class="form-control form-control-lg" placeholder="Name" />
+                            <input type="text" name="formName" id="formName" class="form-control form-control-lg" placeholder="Name" />
                             <label class="form-label" for="formName">Name</label>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="formLastName" class="form-control form-control-lg" placeholder="Last Name" />
+                            <input type="text" name="formLastName" id="formLastName" class="form-control form-control-lg" placeholder="Last Name" />
                             <label class="form-label" for="formLastName">Last name</label>
                           </div>
                         </div>
@@ -65,46 +67,52 @@
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="formCourse" class="form-control form-control-lg" placeholder="Course" />
+                            <input type="date" name="formCourse" id="formCourse" onfocus="this.min=new Date().toISOString().split('T')[0]" class="form-control form-control-lg" placeholder="new Date()" />
                             <label class="form-label" for="formCourse">Course date</label>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="text" id="formFormAdress" class="form-control form-control-lg" placeholder="Form of adress" />
+                            <input type="text" name="formFormAdress" id="formFormAdress" class="form-control form-control-lg" placeholder="Form of adress" />
                             <label class="form-label" for="formFormAdress">form of adress</label>
                           </div>
                         </div>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="formStreet" class="form-control form-control-lg" placeholder="Street adress" />
+                        <input type="text" name="formStreet" id="formStreet" class="form-control form-control-lg" placeholder="Street adress" />
                         <label class="form-label" for="formstreet">Street adress</label>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="text" id="formPostal" class="form-control form-control-lg" placeholder="Postal code" />
+                        <input type="text" name="formPostal" id="formPostal" class="form-control form-control-lg" placeholder="Postal code" />
                         <label class="form-label" for="formPostal">Postal code</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="formCity" class="form-control form-control-lg" placeholder="City" />
+                        <input type="text" name="formCity" id="formCity" class="form-control form-control-lg" placeholder="City" />
                         <label class="form-label" for="formCity">City</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="formEmail" class="form-control form-control-lg" placeholder="Email" />
+                        <input type="text" name="formEmail" id="formEmail" class="form-control form-control-lg" placeholder="Email" />
                         <label class="form-label" for="formEmail">Email</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="formPhone" class="form-control form-control-lg" placeholder="Phone" />
+                        <input type="number" min="0" step="1" name="formPhone" id="formPhone" class="form-control form-control-lg" placeholder="Phone" />
                         <label class="form-label" for="formPhone">Phone</label>
                       </div>
       
                       <div class="d-flex justify-content-end pt-3">
-                        <button type="button" class="btn btn-light btn-lg">Reset all</button>
-                        <button type="button" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                        <!-- <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                        <button type="button" class="btn btn-warning btn-lg ms-2">Submit form</button> -->
+                        <input type="submit" value="submit">
+                      </form>
+                      <p id="message-1"></p>
+                      <p id="message-2"></p>
+                      <p id="message-3"></p>
+                      <p id="message-4"></p>
                       </div>
       
                     </div>
