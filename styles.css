@@ -1,0 +1,38 @@
+ /* colors */
+
+ body , .navbar , .h-100 {
+    background-color: #961937;
+ }
+
+.row {
+    background-color: #E69138;
+ }
+
+ h3 {
+    color: #7B572D;
+ }
+
+ /* Other styles*/
+
+ .py-5 {
+    padding-top: 6rem!important;
+ }
+
+h1 {
+   color: #E69138;
+}
+
+.img-nav {
+   max-width: 15%;
+}
+.vertAlR {
+   display: flex;
+   justify-content: flex-end;
+   align-items:baseline;
+}
+
+.vertAlL {
+   display: flex;
+   justify-content: flex-start;
+   align-items:baseline;
+}
