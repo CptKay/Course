@@ -83,6 +83,34 @@
                             return true;
                         }
                     }
+
+                    // Other fields
+
+                    
+
+                    
+                    
+                    /* function getAdress() {
+                        let inputElement = document.getElementById("formStreet");
+                        let value = inputElement.value;
+                        setLocalStorage("formStreet", value);
+                        return true;
+                    }   
+
+                    function getLastName() {
+                        let inputElement = document.getElementById("formLastName");
+                        let value = inputElement.value;
+                        if (!value) { 
+                            // Bsp. '', null, undefined
+                            return false;
+                        }
+                        
+                        else {
+                            console.log()
+                        setLocalStorage("formLastName", value);
+                        return true;
+                        }
+                    } */           
         
                     function setMessage1(value) {
         
@@ -101,22 +129,7 @@
                         document.getElementById("message-4").innerText = value;
                     }
 
-                    // Other fields
 
-                    function getLastName() {
-                        let inputElement = document.getElementById("formLastName");
-                        let value = inputElement.value;
-                        setLocalStorage("formLastName", value);
-                        return true;
-                    }           
-                    
-                    function getAdress() {
-                        let inputElement = document.getElementById("formStreet");
-                        let value = inputElement.value;
-                        setLocalStorage("formStreet", value);
-                        return true;
-                    }   
-        
                     // Funktion: Schlüssel und Wert in LocalStorage setzen.
 
 function setLocalStorage(key, value) {
