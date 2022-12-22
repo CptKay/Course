@@ -22,6 +22,7 @@
                                     return false;
                                 }
                                 else {
+                                    setLocalStorage("formName", value);
                                     setMessage1(value); 
                                     return true;
                                 }
@@ -37,6 +38,7 @@
                             return false;
                         }
                         else {
+                            setLocalStorage("formCourse", value);
                             setMessage2(value); 
                             return true;
                         }
@@ -59,6 +61,7 @@
                             return false;
                         }
                         else {
+                            setLocalStorage("formEmail", value);
                             setMessage3(value); 
                             return true;
                         }
@@ -75,6 +78,7 @@
                         }
                         
                         else {
+                            setLocalStorage("formPhone", value);
                             setMessage4(value); 
                             return true;
                         }
@@ -97,76 +101,50 @@
                         document.getElementById("message-4").innerText = value;
                     }
         
-                    function validateAnswers() {
-            
-                        if (!checkRadio()) return false;
-                        if (!validateCheckboxes()) return false;
-                        alert ('Good!');
-                        return true;
-                    }
-        
-                  
-        
-                    function checkRadio() {
-                        
-                        let radioElementYes = document.getElementById('yes');
-                        let radioElementNo = document.getElementById('no');
-        
-        
-                    if (!(radioElementYes.checked || radioElementNo.checked)) {
-                        setMessage1 ('Bitte wähle!');
-                        return false;
-                    }
-                    else {
-                        let radioButtons = document.getElementsByName("radio-mood");
-                        let value;
-                        for (let b = 0; b < radioButtons.length; ++b) {
-                            let button = radioButtons[b];
-                            if (button.checked) {
-                                value = button.value;
-                                break;
-                            }
-                        }
-                      
-                        setMessage1('Du hast "' + value + '" ausgewählt' );
-                        return true;
-                    }
-                } 
-        
-                function validateCheckboxes() {
-                        let checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-                        
-                        console.log('checkedCheckboxes =', checkedCheckboxes);
-        
-                        let redSelected = false;
-                        let whiteSelected = false;
-                        let wrongColorSelected = false;
-        
-                    
-        
-                    for (let c = 0; c < checkedCheckboxes.length; ++c) {
-                        let checkbox = checkedCheckboxes[c];
-        
-                        if (checkbox.value === 'rot') redSelected = true;
-                        else if (checkbox.value === 'weiss') whiteSelected = true;
-                        else wrongColorSelected = true;
-                    }
-        
-        console.log('redSelected=', redSelected);
-        console.log('whiteSelected=', whiteSelected);
-        console.log('wrongColorSelected =', wrongColorSelected);
-        
-                            if (!(redSelected && whiteSelected && ! wrongColorSelected) ) {
-                                // Fehlerfall
-                                setMessage2('Try harder!')
-                            
-                            return false;
-                        }
-                        else {
-                            // Erfolgsfall
-                            setMessage2('Gut!')
-                            return true;
-                        }
-                    }
+                    // Funktion: Schlüssel und Wert in LocalStorage setzen.
+
+function setLocalStorage(key, value) {
+    localStorage.setItem(key, value);
+}
+
+
+
+// Funktion: Wert zum Schlüssel aus LocalStorage auslesen.
+
+function getLocalStorage(key) {
+    return localStorage.getItem(key);
+}
+
+// Funktion: Bestätigung generieren
+
+function writeConfirmation() {
+
+
+
+    // Die Personalien werden in Variablen ausgelesen.
+
+let firstName = getLocalStorage("formName");
+let courseDate = getLocalStorage("formCourse");
+let email = getLocalStorage("formEmail");
+let phone = getLocalStorage("formPhone");
+// alert(`firstName = ${firstName}`);
+
+
+    /*
+        Die Beschriftungen und Platzhalter für die obigen Variablen werden in ein 
+        String Template eingetragen. Zur Gliederung und Gestaltung werden zudem 
+        <p> und <span> Elemente verwendet.
+    */
+let confirmation = 
+`   <p><span class="confirmation-label">Name:</span> ${firstName}</p>
+    <p><span class="confirmation-label">Date:</span> ${courseDate}</p>
+    <p><span class="confirmation-label">Email:</span> ${email}</p>
+    <p><span class="confirmation-label">Phone:</span> ${phone}</p>
+`
+;
+
+    // Die Bestätigung wird als innerHTML gesetzt.
+document.getElementById("confirmation-message").innerHTML = confirmation;
+}
                 
                 
