@@ -100,6 +100,22 @@
                     function setMessage4(value) {
                         document.getElementById("message-4").innerText = value;
                     }
+
+                    // Other fields
+
+                    function getLastName() {
+                        let inputElement = document.getElementById("formLastName");
+                        let value = inputElement.value;
+                        setLocalStorage("formLastName", value);
+                        return true;
+                    }           
+                    
+                    function getAdress() {
+                        let inputElement = document.getElementById("formStreet");
+                        let value = inputElement.value;
+                        setLocalStorage("formStreet", value);
+                        return true;
+                    }   
         
                     // Funktion: Schlüssel und Wert in LocalStorage setzen.
 
@@ -124,6 +140,8 @@ function writeConfirmation() {
     // Die Personalien werden in Variablen ausgelesen.
 
 let firstName = getLocalStorage("formName");
+let LastName = getLocalStorage("formLastName");
+let street = getLocalStorage("formStreet");
 let courseDate = getLocalStorage("formCourse");
 let email = getLocalStorage("formEmail");
 let phone = getLocalStorage("formPhone");
@@ -136,7 +154,8 @@ let phone = getLocalStorage("formPhone");
         <p> und <span> Elemente verwendet.
     */
 let confirmation = 
-`   <p><span class="confirmation-label">Name:</span> ${firstName}</p>
+`   <p><span class="confirmation-label">Name:</span> ${firstName} ${LastName}</p>
+    <p><span class="confirmation-label">Street:</span> ${street}</p>
     <p><span class="confirmation-label">Date:</span> ${courseDate}</p>
     <p><span class="confirmation-label">Email:</span> ${email}</p>
     <p><span class="confirmation-label">Phone:</span> ${phone}</p>

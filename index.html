@@ -14,43 +14,88 @@
     
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid vertAlR">
-        <a class="navbar-brand" href="#"><h1>Booking</h1></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#booking"><h1>Booking</h1></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><h1>Gato Zen Cat Yoga</h1></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><img src="images/Logo_GatoZen.png" class="img-nav" alt="Logo"></a></li>
+                    </ul>
         
     </div>
-      <div class="container-fluid vertAlR">
-        
-        <a class="navbar-brand" href="#"><h1>Gato Zen Cat Yoga</h1></a>
-        
-        
-      
-    </div>
-      <div class="container-fluid vertAlR">
-        
-          
-          <a class="navbar-brand" href="#"><img src="images/Logo_GatoZen.png" class="img-nav" alt="Logo"></a>
-        </div>
         
     </nav>
+
+    <section class="h-100" id="about">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card my-4">
+              <div class="row g-0">
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img src="images/frau-macht-cat-yoga-mit-katze-1024x683-1.jpeg"
+                    alt="Sample photo" class="img-fluid"
+                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                </div>
+                <div class="col-xl-6">
+                  <div class="card-body p-md-5 text-black">
+                    <h3 class="mb-5 text-uppercase">The mewest exercise</h3>
+                    Come enjoy a soothing Hatha
+flow yoga session with your
+cat.
+Your instructor leads you in a
+practice suitable for all ex-
+perience levels.
+
+A full espresso bar is available
+after the practice, as well as
+tea, other drinks, and snacks.
+
+Space is limited and re-
+servations are required, so
+book today to ensure you have
+a spot!
     
-    <section class="h-100">
+                    <div class="row">
+                      
+                      <div class="col-md-6 mb-4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+    
+    <section class="h-100" id="booking">
      
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
               <div class="card card-registration my-4">
                 <div class="row g-0">
+                  
                   <div class="col-xl-6 d-none d-xl-block">
-                    <img src="images/frau-macht-cat-yoga-mit-katze-1024x683-1.jpeg"
+                    
+                    <img src="images/Logo_GatoZen.png"
                       alt="Sample photo" class="img-fluid"
                       style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                      
                   </div>
                   <div class="col-xl-6">
+                    
                     <div class="card-body p-md-5 text-black">
                       <h3 class="mb-5 text-uppercase">Apply for a course</h3>
       
                       <div class="row">
                         <div class="col-md-6 mb-4">
-                          <form action="confirmation.html" onsubmit="return validateForm();">
+                          <form action="#confirmation" onsubmit="return validateForm();">
                           <div class="form-outline">
                             <input type="text" name="formName" id="formName" class="form-control form-control-lg" placeholder="Name" />
                             <label class="form-label" for="formName">Name</label>
@@ -122,6 +167,54 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="h-100" id="confirmation">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card my-4">
+                <div class="row g-0">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="images/CatYoga.png"
+                      alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase">Confirmation</h3>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div id="confirmation-message" class="alert alert-success" role="alert">
+                          </div>
+                          <script>
+                              writeConfirmation();
+                          </script>
+      
+                      <div class="row">
+                        <address>
+                          Gato Zen Cat Yoga
+Ashravi-House
+Sitzweg 52
+8005 Zürich
+
++417945454545
+                        </address>
+                        
+                        <div class="col-md-6 mb-4">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+  
       </section>
 </body>
 </html>
