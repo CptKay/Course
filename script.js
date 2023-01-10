@@ -114,19 +114,23 @@
         
                     function setMessage1(value) {
         
-                        document.getElementById("message-1").innerText = value;
+                        // document.getElementById("message-1").innerText = value;
+                        alert(value);
                     }
         
                     function setMessage2(value) {
-                        document.getElementById("message-2").innerText = value;
+                        // document.getElementById("message-2").innerText = value;
+                        alert(value);
                     }
         
                     function setMessage3(value) {
-                        document.getElementById("message-3").innerText = value;
+                        // document.getElementById("message-3").innerText = value;
+                        alert(value);
                     }
 
                     function setMessage4(value) {
-                        document.getElementById("message-4").innerText = value;
+                        // document.getElementById("message-4").innerText = value;
+                        alert(value);
                     }
 
 
@@ -176,7 +180,7 @@ let confirmation =
 ;
 
     // Die Bestätigung wird als innerHTML gesetzt.
-document.getElementById("confirmation-message").innerHTML = confirmation;
+// document.getElementById("confirmation-message").innerHTML = confirmation;
 }
                 
                 

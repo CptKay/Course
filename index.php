@@ -72,6 +72,8 @@ a spot!
     </section>
     
     <section class="h-100" id="booking">
+
+    <script src="script.js"></script>
      
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -90,36 +92,35 @@ a spot!
                     
                     <div class="card-body p-md-5 text-black">
                       <h3 class="mb-5 text-uppercase">Apply for a course</h3>
-      
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <!-- FORMULAR -->
+                          <!-- FORMULAR -->
                           <!-- <form action="#confirmation" onsubmit="return validateForm();"> -->
-                          <form action="#confirmation" method="post">
+                          <form action="#confirmation" method="post" onsubmit="return validateForm();">
+                      <div class="row">
+                          <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" name="formFormAdress" id="formFormAdress" class="form-control form-control-lg" placeholder="Form of adress" />
+                            <label class="form-label" for="formFormAdress">form of adress</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
                           <div class="form-outline">
                             <input type="text" name="formName" id="formName" class="form-control form-control-lg" placeholder="Name" />
                             <label class="form-label" for="formName">Name</label>
                           </div>
                         </div>
-                        <div class="col-md-6 mb-4">
+                      </div>
+      
+                      <div class="row">
+                      <div class="col-md-6 mb-4">
                           <div class="form-outline">
                             <input type="text" name="formLastName" id="formLastName" class="form-control form-control-lg" placeholder="Last Name" />
                             <label class="form-label" for="formLastName">Last name</label>
                           </div>
                         </div>
-                      </div>
-      
-                      <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
                             <input type="date" name="formCourse" id="formCourse" onfocus="this.min=new Date().toISOString().split('T')[0]" class="form-control form-control-lg" placeholder="new Date()" />
                             <label class="form-label" for="formCourse">Course date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="text" name="formFormAdress" id="formFormAdress" class="form-control form-control-lg" placeholder="Form of adress" />
-                            <label class="form-label" for="formFormAdress">form of adress</label>
                           </div>
                         </div>
                       </div>
